@@ -20,7 +20,9 @@ server.get('*', (req, res) => {
       return;
     }
     ; (async () => {
-      const html = await renderer.renderToString(app)
+      // const html = 
+      await renderer.renderToString(app)
+      res.contentType('html')
       res.end(`__HTML__`)
     })()
   });
